@@ -1,0 +1,29 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingKategori2">
+        <button class="accordion-button collapsed bg-success text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKategori2" aria-expanded="false" aria-controls="collapseKategori2">
+            Normal Stok <span class="total-price">{{ toplam_fiyat_kategori2|floatformat:2 }} EUR</span>
+        </button>
+    </h2>
+    <div id="collapseKategori2" class="accordion-collapse collapse" aria-labelledby="headingKategori2" data-bs-parent="#depoAccordion">
+        <div class="accordion-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Hammadde</th>
+                        <th>Miktar</th>
+                        <th>Maddi Değer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for depo in kategori2_urunleri %}
+                        <tr>
+                            <td>{{ depo.hammadde_adi }}</td>
+                            <td>{{ depo.miktar }}</td>
+                            <td>{{ depo.maddi_deger|floatformat:2 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

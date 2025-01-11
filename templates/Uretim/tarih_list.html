@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tarih Listesi</title>
+</head>
+<body>
+    <h1>Tarih Listesi</h1>
+    <ul>
+        {% for tarih in tarihler %}
+        <li>
+            <a href="{% url 'urun_grup_list' tarih %}">{{ tarih }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

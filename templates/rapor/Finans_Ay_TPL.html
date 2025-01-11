@@ -1,0 +1,15 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFinans_Ay_TPL">
+        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinans_Ay_TPL" aria-expanded="false" aria-controls="collapseFinans_Ay_TPL">
+            Aylik Durum Raporu - {{ ay_adi }} : {{ aylik_fark|floatformat:2 }}  Eur
+        </button>
+    </h2>
+    <div id="collapseFinans_Ay_TPL" class="accordion-collapse collapse" aria-labelledby="headingFinans_Ay_TPL" data-bs-parent="#finansAccordion">
+        <div class="accordion-body">
+            <div class="accordion" id="Finans_Ay_TPL">
+                {% include 'rapor/aylik_gider.html' %}
+                {% include 'rapor/aylik_gelir_rapor.html' %}
+            </div>
+        </div>
+    </div>
+</div>

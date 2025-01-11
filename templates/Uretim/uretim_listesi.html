@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Üretim Listesi</title>
+</head>
+<body>
+    <h1>Üretim Listesi</h1>
+    <table border="1">
+        <tr>
+            <th>Tarih</th>
+            <th>Ürün Adı</th>
+            <th>Üretim Adedi</th>
+            <th>Kaç Kişi Çalıştı</th>
+            <th>Başlama Saati</th>
+            <th>Bitiş Saati</th>
+            <th>Notlar</th>
+        </tr>
+        {% for uretim in uretimler %}
+        <tr>
+            <td>{{ uretim.tarih }}</td>
+            <td>{{ uretim.urun_adi }}</td>
+            <td>{{ uretim.uretim_adedi }}</td>
+            <td>{{ uretim.kac_kisi_calisti }}</td>
+            <td>{{ uretim.baslama_saati }}</td>
+            <td>{{ uretim.bitis_saati }}</td>
+            <td>{{ uretim.notlar }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

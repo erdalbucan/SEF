@@ -1,0 +1,28 @@
+{% include 'partials/_yonetim_nav.html' %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label for="{{ form.tarih.id_for_label }}">{{ form.tarih.label }}</label>
+        {{ form.tarih }}
+    </div>
+
+    <h3>Bölüm 1</h3>
+    {{ form.bolum1_formset.management_form }}
+    {% for form in form.bolum1_formset %}
+        {{ form.as_p }}
+    {% endfor %}
+
+    <h3>Bölüm 2</h3>
+    {{ form.bolum2_formset.management_form }}
+    {% for form in form.bolum2_formset %}
+        {{ form.as_p }}
+    {% endfor %}
+
+    <h3>Bölüm 3</h3>
+    {{ form.bolum3_formset.management_form }}
+    {% for form in form.bolum3_formset %}
+        {{ form.as_p }}
+    {% endfor %}
+
+    <button type="submit">Kaydet</button>
+</form>

@@ -1,0 +1,17 @@
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingFinans">
+        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFinans" aria-expanded="false" aria-controls="collapseFinans">
+            Finans Raporları
+        </button>
+    </h2>
+    <div id="collapseFinans" class="accordion-collapse collapse" aria-labelledby="headingFinans" data-bs-parent="#raporlarAccordion">
+        <div class="accordion-body">
+            <div class="accordion" id="finansAccordion">
+                {% include 'rapor/Finans_Gun.html' %}
+                {% include 'rapor/Finans_Ay_TPL.html' %}
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,17 @@
+<h2>Sipariş Geçmişiniz</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sipariş Tarihi</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for siparis in siparisler %}
+        <tr>
+            <td>{{ siparis.tarih }}</td>
+            <td>{{ siparis.durum }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

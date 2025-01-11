@@ -1,0 +1,38 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingAylikGider">
+        <button class="accordion-button collapsed bg-danger text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAylikGider" aria-expanded="false" aria-controls="collapseAylikGider">
+            Aylık Gider - {{ ay_adi }} : {{ toplam_aylik_gider|floatformat:2 }}  Eur
+        </button>
+    </h2>
+    <div id="collapseAylikGider" class="accordion-collapse collapse" aria-labelledby="headingAylikGider" data-bs-parent="#Finans_Ay_TPL">
+        <div class="accordion-body">
+            <section>
+                <h4>Aylık Giderler</h4>
+                {% if aylik_giderler %}
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col-2 fw-bold">Tarih:</div>
+                            <div class="col-2 fw-bold">Hammadde Gideri:</div>
+                            <div class="col-2 fw-bold">Personel Planlanan Gider:</div>
+                            <div class="col-2 fw-bold">Personel ilave Gider:</div>
+                            <div class="col-2 fw-bold">Sabit Gider Payı:</div>
+                            <div class="col-2 fw-bold">Toplam Gider:</div>
+                        </div>
+                        {% for gider in aylik_giderler %}
+                        <div class="row mb-2">
+                            <div class="col-2">{{ gider.tarih }}</div>
+                            <div class="col-2">{{ gider.hammadde_gideri }}</div>
+                            <div class="col-2">{{ gider.personel_planlanan }}</div>
+                            <div class="col-2">{{ gider.personel_ilave }}</div>
+                            <div class="col-2">{{ gider.sabit_gider_payi }}</div>
+                            <div class="col-2">{{ gider.toplam_gider|floatformat:2 }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>Bu ay için veri bulunamadı.</p>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</div>

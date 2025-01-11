@@ -1,0 +1,52 @@
+urun;Sutun_3;Sutun_4;Sutun_5
+Kalkkuna - Juusto;22;;
+;1;dijon;222.0
+;2;mayonez;888.0
+;;Toplam 1;1110.0
+;x;Üçgen Ekmek;2960.0
+;;Toplam 2;2960.0
+;x;Hindi Salam;1110.0
+;;Toplam 3;1110.0
+;x;Gouda Peynir;1110.0
+;;Toplam 4;1110.0
+;x;Provence Salat;370.0
+;;Toplam 5;370.0
+;;Toplam Kalkkuna - Juusto;6660.0
+akordionKapa;;;
+Kana Pekoni;5;;
+;x;Üçgen Ekmek;3520.0
+;;Toplam 1;3520.0
+;x;tavuk şerit;880.0
+;;Toplam 2;880.0
+;x;tavuk Pastırma;880.0
+;;Toplam 3;880.0
+;x;mayonez;1760.0
+;;Toplam 4;1760.0
+;x;Provence Salat;440.0
+;11;Toplam 5;440.0
+;;Toplam Kana Pekoni;7480.0
+akordionKapa;;;
+Kana Pesto Mozzarella;42;;
+;1;yeşil pesto;840.0
+;2;mayonez;840.0
+;;Toplam 1;1680.0
+;x;Üçgen Ekmek;3360.0
+;;Toplam 2;3360.0
+;x;tavuk şerit;840.0
+;7;Toplam 3;840.0
+;x;mozarella wrap;840.0
+;;Toplam 4;840.0
+;x;Provence Salat;420.0
+;;Toplam 5;420.0
+;;Toplam Kana Pesto Mozzarella;7140.0
+akordionKapa;;;
+Tonni - Aioli;55;;
+;1;Ton Balığı;2200.0
+;2;aioli;2200.0
+;;Toplam 1;4400.0
+;x;Üçgen Ekmek;4400.0
+;;Toplam 2;4400.0
+;x;Provence Salat;550.0
+;;Toplam 3;550.0
+;;Toplam Tonni - Aioli;9350.0
+akordionKapa;;;

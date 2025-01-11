@@ -1,0 +1,17 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingUretim_accordion">
+        <button class="accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUretim_accordion" aria-expanded="false" aria-controls="collapseUretim_accordion">
+            Uretim Raporları
+        </button>
+    </h2>
+    <div id="collapseUretim_accordion" class="accordion-collapse collapse" aria-labelledby="headingUretim_accordion" data-bs-parent="#raporlarAccordion">
+        <div class="accordion-body">
+            <div class="accordion" id="Uretim_accordion">
+                {% include 'rapor/uretim_istatistikleri.html' %}
+                {% include 'rapor/gunluk_uretim_raporu.html' %}
+                {% include 'rapor/haftalik_uretim_programi.html' %}
+                {% include 'rapor/haftalik_personel_programi.html' %}
+            </div>
+        </div>
+    </div>
+</div>

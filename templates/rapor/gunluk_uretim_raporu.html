@@ -1,0 +1,34 @@
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingDailyReport">
+        <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDailyReport" aria-expanded="false" aria-controls="collapseDailyReport">
+            Günlük Üretim Raporu - {{ son_tarih }}
+        </button>
+    </h2>
+    <div id="collapseDailyReport" class="accordion-collapse collapse" aria-labelledby="headingDailyReport" data-bs-parent="#Uretim_accordion">
+        <div class="accordion-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Ürün Adı</th>
+                        <th>Üretim Adedi</th>
+                        <th>Kaç Kişi</th>
+                        <th>Toplam Çalışma Saati</th>
+                        <th>Maliyet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for uretim in gunluk_uretim_verileri %}
+                        <tr>
+                            <td>{{ uretim.urun_adi }}</td>
+                            <td>{{ uretim.uretim_adedi }}</td>
+                            <td>{{ uretim.kac_kisi_calisti }}</td>
+                            <td>{{ uretim.toplam_calisma_saati }}</td>
+                            <td>{{ uretim.maliyet_uretim|floatformat:4 }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

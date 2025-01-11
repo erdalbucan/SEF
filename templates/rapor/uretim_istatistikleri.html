@@ -1,0 +1,38 @@
+{% include 'partials/_yonetim_nav.html' %}
+<html lang="en">
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed bg-primary text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Üretim İstatistikleri
+        </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#Uretim_accordion">
+        <div class="accordion-body">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Ürün Grubu</th>
+                        <th>Son Üretim Maliyeti</th>
+                        <th>Ortalama Maliyet</th>
+                        <th>Fark</th>
+                        <th>En Düşük Maliyet</th>
+                        <th>En Düşük Maliyet Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for grup in urun_gruplari_detay %}
+                        <tr>
+                            <td>{{ grup.urun_adi }}</td>
+                            <td>{{ grup.son_uretim_maliyeti|floatformat:4 }}</td>
+                            <td>{{ grup.ortalama_maliyet|floatformat:4 }}</td>
+                            <td>{{ grup.fark|floatformat:4 }}</td>
+                            <td>{{ grup.en_dusuk_maliyet|floatformat:4 }}</td>
+                            <td>{{ grup.en_dusuk_maliyet_tarih }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</html>

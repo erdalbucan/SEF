@@ -1,0 +1,15 @@
+
+body, html {
+    font-size: 24px; /* Font boyutunu ihtiyacınıza göre ayarlayın */
+    font-family: 'Arial', sans-serif; /* İstediğiniz font ailesini seçin */
+}
+
+/* Admin panelindeki tüm form elemanları */
+input, select, textarea {
+    font-size: 18px; /* Font boyutunu ihtiyacınıza göre ayarlayın */
+}
+
+/* Admin panelindeki başlıklar */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 14px; /* Başlıkların font boyutunu ayarlayın */
+}

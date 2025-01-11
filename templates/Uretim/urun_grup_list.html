@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ürün Grupları</title>
+</head>
+<body>
+    <h1>Ürün Grupları - {{ tarih }}</h1>
+    <ul>
+        {% for grup in urun_gruplari %}
+        <li>
+            <a href="{% url 'urun_grubu_detaylari' tarih grup.Urn_kategori %}">{{ grup.Urn_kategori }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'tarih_list' %}">Geri Dön</a>
+</body>
+</html>

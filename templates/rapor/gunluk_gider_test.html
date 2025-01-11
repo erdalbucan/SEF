@@ -1,0 +1,36 @@
+<div class="card mb-3">
+<!--    <div class="card-header bg-success text-white">-->
+<!--        Günlük Gelir Raporu-->
+<!--    </div>-->
+<!--    <div class="card-body">-->
+<!--        {% if gunluk_gelir %}-->
+<!--            <h5 class="card-title">Tarih: {{ gunluk_gelir.tarih }}</h5>-->
+<!--            <p class="card-text">Toplam Gelir: {{ gunluk_gelir.toplam_gelir }}</p>-->
+<!--        {% else %}-->
+<!--            <p>Bugün için gelir kaydı bulunmamaktadır.</p>-->
+<!--        {% endif %}-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingGunlukGider">
+        <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGunlukGider" aria-expanded="false" aria-controls="collapseGunlukGider">
+            Günlük Gider : {{ gunluk_gider }}
+        </button>
+    </h2>
+    <div id="collapseGunlukGider" class="accordion-collapse collapse" aria-labelledby="headingGunlukGider" data-bs-parent="#FinansGUNtpl">
+        <div class="accordion-body">
+            <section>
+                <div class="card-body">
+                    {% if gunluk_gider %}
+                        <h5 class="card-title">Tarih: {{ gunluk_gider.tarih }}</h5>
+                        <p class="card-text">Toplam Gider: {{ gunluk_gider.toplam_gider }}</p>
+                    {% else %}
+                        <p>Bugün için gelir kaydı bulunmamaktadır.</p>
+                    {% endif %}
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

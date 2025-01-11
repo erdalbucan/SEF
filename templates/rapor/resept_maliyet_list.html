@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% include 'partials/_yonetim_nav.html' %}
+<html>
+<head>
+    <title>Resept Maliyet Listesi</title>
+</head>
+<body>
+    <h1>Resept Maliyetleri</h1>
+    <table border="1">
+        <tr>
+            <th>Resept Adı</th>
+            <th>Hammadde Toplam Maliyet</th>
+        </tr>
+        {% for maliyet in maliyetler %}
+        <tr>
+            <td>{{ maliyet.resept.resept_adi }}</td>
+            <td>{{ maliyet.hammaddeTopMaliyet }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">Maliyet kaydı bulunamadı.</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

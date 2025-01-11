@@ -1,0 +1,100 @@
+urun;Sutun_3;Sutun_4;Sutun_5
+Curry Pasta;0;;
+;1;makarna;140
+;2;köri sosu;50
+;3;tavuk küp;45
+;4;d. havuç;22
+;5;d. mısır;17
+;6;d. bezelye;17
+;7;yağ;8
+;8;tuz;1
+;;Toplam 1;300
+;;Toplam Curry Pasta;300
+akordionKapa;;;
+Döner;0;;
+;1;et döner;80
+;2;Görans Kebab sosu;50
+;;Toplam 1;130
+;3;jasmin pirinç;170
+;;Toplam 2;170
+;;Toplam Döner;300
+akordionKapa;;;
+Kana Kebab;0;;
+;1;tavuk döner;95
+;2;meksika baharat;5
+;;Toplam 1;100
+;3;jasmin pirinç;200
+;;Toplam 2;200
+;;Toplam Kana Kebab;300
+akordionKapa;;;
+Keftedes;0;;
+;1;jasmin pirinç;150
+;;Toplam 1;150
+;4;et köfte;80
+;5;domates sosu yemek;69
+;;Toplam 2;149
+;;Toplam Keftedes;299
+akordionKapa;;;
+Korean Kana;0;;
+;1;jasmin pirinç;152
+;2;kişniş taze;7
+;3;yağ;6
+;4;sesame yağ;2
+;5;kala kastike;2
+;6;d. soya fasulyesi;30
+;;Toplam 1;200
+;9;tavuk şerit;88
+;10;teriyaki sos;6
+;11;siyah susam;4
+;12;sesame yağ;2
+;;Toplam 2;100
+;;Toplam Korean Kana;300
+akordionKapa;;;
+Paella;0;;
+;1;jasmin pirinç;150
+;;Toplam 1;150
+;2;midye;21
+;3;karides;21
+;4;tavuk küp;28
+;5;d. bezelye;14
+;6;d. havuç;14
+;7;d. Soğan;14
+;8;d. Paprika;14
+;9;d. Maydanoz;2
+;10;domates sosu;14
+;11;yağ;6
+;12;sarımsak püresi;1
+;13;limon suyu;1
+;14;tuz;1
+;15;karabiber;0
+;16;Zerdecal;0
+;;Toplam 2;150
+;;Toplam Paella;300
+akordionKapa;;;
+Pasta Bolognese;0;;
+;1;makarna;150
+;2;Dana Kıyma;50
+;3;domates sosu yemek;99
+;;Toplam 1;299
+;;Toplam Pasta Bolognese;299
+akordionKapa;;;
+Stifado;0;;
+;1;fin et;45
+;2;taze küp patates;55
+;3;d. Soğan;20
+;4;d. Maydanoz;2
+;5;domates sosu yemek;16
+;6;yağ;5
+;7;domates salçası;2
+;8;Balsamik Sirke;3
+;9;şeker;0
+;10;sarımsak püresi;1
+;11;Yenibahar;0
+;12;biberiye;0
+;13;tarçın;0
+;14;kimyon;0
+;;Toplam 1;150
+;15;jasmin pirinç;150
+;;Toplam 2;150
+;;Toplam Stifado;300
+akordionKapa;;;

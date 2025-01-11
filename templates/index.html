@@ -1,0 +1,42 @@
+{% include 'partials/_library_getbootstrap.html' %}
+{% load static %}
+{% csrf_token %}
+
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body, html {
+            margin: 10;
+            padding: 10;
+            height: 100%;
+
+            justify-content: cover;
+            align-items: cover;
+            background-image: url("{% static 'images/my_photo.webp' %}");
+            background-size: cover;
+            background-position: center;
+        }
+         .content {
+            margin-top: 250px; /* Sayfanın 150 piksel aşağı inmesini sağlar */
+            z-index: 1;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: column;
+            align-items: center;
+            background: rgba(192, 192, 192, 0.75); /* Butonların daha iyi görünmesi için yarı saydam arka plan */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        {% include 'partials/_SEF_anaEkr_menu.html' %}
+    </div>
+</body>
+</html>

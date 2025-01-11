@@ -1,0 +1,15 @@
+{% extends "admin/change_list.html" %}
+
+{% block content %}
+    {% if toplam_gelir is not None %}
+    <div style="margin: 20px 0;">
+        <h3>Finansal Durum Özeti</h3>
+        <ul>
+            <li><strong>Toplam Gelir:</strong> {{ toplam_gelir }}</li>
+            <li><strong>Toplam Gider:</strong> {{ toplam_gider }}</li>
+            <li><strong>Kasa Kalan:</strong> {{ kasa_kalan }}</li>
+        </ul>
+    </div>
+    {% endif %}
+    {{ block.super }}
+{% endblock %}

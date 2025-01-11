@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% include 'partials/_yonetim_nav.html' %}
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>{{ file_name }} Formul</title>
+
+    <!-- Custom CSS -->
+    <style>
+        /* Tablonun geneline uygulanan stiller */
+        table {
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            width: 100%;
+            table-layout: fixed;
+            word-wrap: break-word;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #dee2e6;
+        }
+
+        thead th {
+            background-color: #f8f9fa;
+            color: #333;
+            font-weight: bold;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table-total {
+            background-color: #ffc107;
+            font-weight: bold;
+        }
+
+        /* Accordion başlıkları için tamamlanmış stil */
+        .accordion-button.completed {
+            background-color: #28a745 !important;
+            color: white !important;
+        }
+
+        /* Accordion başlığı ve buton hizası */
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Accordion butonu tamamlanmış */
+        .complete-btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-12">
+        <h2>{{ file_name }} Formul</h2>
+
+        <div class="accordion" id="csvAccordion">
+            {% for row in rows %}
+                {% if 'akordionKapa' in row.urun %}
+                    <!-- Akordiyon sonu -->
+                            </div>  <!-- Accordion content ends here -->
+                        </div>  <!-- Akordiyon kapanışı -->
+                    </div>
+                {% elif row.urun == '' %}
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                {% for key, value in row.items %}
+                                    {% if forloop.counter == 1 %}
+                                        <!-- İlk veri gösterilmeyecek -->
+                                    {% elif forloop.counter == 2 %}
+                                        <td colspan="2">{{ value| default_if_none:" "|floatformat:0 }}</td> <!-- İkinci veri 2 sütun kaplayacak -->
+                                    {% elif forloop.counter == 3 %}
+                                        <td colspan="8">{{ value|default_if_none:" " }}</td> <!-- Üçüncü veri 7 sütun kaplayacak -->
+                                    {% elif forloop.counter == 4 %}
+                                        <td colspan="3">{{ value|default_if_none:" " }}</td> <!-- Dördüncü veri 3 sütun kaplayacak -->
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </tbody>
+                    </table>
+                {% else %}
+                    <!-- Yeni akordiyon başlangıcı -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                            <!-- Accordion başlığı sol tarafta kalır -->
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse{{ forloop.counter }}">
+                                {{ row.urun }}  urununden   {{ row.Sutun_3 |floatformat:0 }} edet <!-- Ürün ismi akordiyon başlığı -->
+                            </button>
+                            <!-- Tamamlandı Butonu sağda hizalanır -->
+                            <button class="btn btn-sm btn-success complete-btn">Tamamlandı</button>
+                        </h2>
+                        <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#csvAccordion">
+                            <div class="accordion-body">
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // JavaScript kodu: Tamamlandı butonuna tıklandığında başlık rengini değiştir
+        $(document).ready(function() {
+            $('.complete-btn').on('click', function() {
+                // Accordion başlığını yeşil yapmak için 'completed' sınıfını ekle
+                $(this).closest('.accordion-header').find('.accordion-button').addClass('completed');
+            });
+        });
+    </script>
+</body>
+</html>

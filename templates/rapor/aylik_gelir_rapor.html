@@ -1,0 +1,30 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingAylikGelir">
+        <button class="accordion-button collapsed bg-warning text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAylikGelir" aria-expanded="false" aria-controls="collapseAylikGelir">
+            Aylık Gelir - {{ ay_adi }} : {{ toplam_aylik_gelir|floatformat:2 }}  Eur
+        </button>
+    </h2>
+    <div id="collapseAylikGelir" class="accordion-collapse collapse" aria-labelledby="headingAylikGelir" data-bs-parent="#Finans_Ay_TPL">
+        <div class="accordion-body">
+            <section>
+                <h4> Aylık Gelir</h4>
+                {% if toplam_aylik_gelir %}
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col-2 fw-bold">Tarih:</div>
+                            <div class="col-2 fw-bold">Toplam Gelir:</div>
+                        </div>
+                        {% for gelir in aylik_gelirler %}
+                        <div class="row mb-2">
+                            <div class="col-2">{{ gelir.tarih }}</div>
+                            <div class="col-2">{{ toplam_aylik_gelir|floatformat:2 }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>Bu ay için veri bulunamadı.</p>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</div>

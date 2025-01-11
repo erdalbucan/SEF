@@ -1,0 +1,36 @@
+{% include 'partials/_yonetim_nav.html' %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <title>Formul Listesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobil uyumlu tasarım için meta tag -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="my-4 text-center" style="font-size: 2.5rem;">Formul Dosyaları</h2> <!-- Başlık ortalandı ve büyük font -->
+        <div class="row">
+            {% for file in files %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"> <!-- Cihaz genişliğine göre otomatik boyutlanır -->
+                    <div class="card" style="width: 100%;">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" style="font-size: 1.25rem;"> <!-- Tarihi yazısı için daha büyük font -->
+                                <!-- Tarihi: <span class="font-weight-bold">{{ file.Formul_tarihi }}</span> -->
+                                Tarihi: <span class="font-weight-bold">{{ file.Formul_tarihi|date:"l" }}</span>
+
+                            </li>
+                            <li class="list-group-item" style="font-size: 1.25rem;"> <!-- Dosya adı için daha büyük font -->
+                                <a href="{% url 'view_file' file.id %}" class="font-weight-bold">{{ file.name }}</a>
+                            </li>
+                        </ul>
+                        <div class="card-footer" style="font-size: 1.1rem;">
+                            Dosya ID: <span class="font-weight-bold">{{ file.id }}</span>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+

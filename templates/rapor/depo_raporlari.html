@@ -1,0 +1,17 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed bg-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Depo Raporları
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#raporlarAccordion">
+        <div class="accordion-body">
+            <div class="accordion" id="depoAccordion">
+                {% include 'rapor/depo_ihtiyac_fazlasi.html' %}
+                {% include 'rapor/depo_normal_stok.html' %}
+                {% include 'rapor/depo_siparis_geregi.html' %}
+                {% include 'rapor/depo_kriz_stok.html' %}
+            </div>
+        </div>
+    </div>
+</div>

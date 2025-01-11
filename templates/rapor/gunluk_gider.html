@@ -1,0 +1,36 @@
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingGunlukGider">
+        <button class="accordion-button collapsed bg-info text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGunlukGider" aria-expanded="false" aria-controls="collapseGunlukGider">
+            Günlük Gider : {% if gunluk_gider %} {{ gunluk_gider.tarih }} {% endif %} - {% if gunluk_gider %} {{ gunluk_gider.toplam_gider|floatformat:2 }} {% endif %}  Eur
+        </button>
+    </h2>
+    <div id="collapseGunlukGider" class="accordion-collapse collapse" aria-labelledby="headingGunlukGider" data-bs-parent="#FinansGUNtpl">
+        <div class="accordion-body">
+            <section>
+                <h4>Günlük Giderler</h4>
+                {% if gunluk_gider %}
+                    <div class="container">
+                        <div class="row mb-2">
+                            <div class="col-2 fw-bold">Tarih:</div>
+                            <div class="col-2 fw-bold">Hammadde Gideri:</div>
+                            <div class="col-2 fw-bold">Planlanan Prsonel Gideri:</div>
+                            <div class="col-2 fw-bold">ilave Prsonel Gideri:</div>
+                            <div class="col-2 fw-bold">Sabit Gider Payı:</div>
+                            <div class="col-2 fw-bold">Toplam Gider:</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-2">{{ gunluk_gider.tarih }}</div>
+                            <div class="col-2">{{ gunluk_gider.hammadde_gideri }}</div>
+                            <div class="col-2">{{ gunluk_gider.personel_planlanan }}</div>
+                            <div class="col-2">{{ gunluk_gider.personel_ilave }}</div>
+                            <div class="col-2">{{ gunluk_gider.sabit_gider_payi }}</div>
+                            <div class="col-2">{{ gunluk_gider.toplam_gider|floatformat:2 }}</div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p>Bugün için veri bulunamadı.</p>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+</div>

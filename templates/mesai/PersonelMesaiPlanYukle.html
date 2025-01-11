@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% include 'partials/_yonetim_nav.html' %}
+<html lang="en">
+<head>
+    <title>Persolen Mesai Plan Yükle</title>
+</head>
+<body>
+    <h1>CSV Dosyasını Yükleyin</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Yükle</button>
+    </form>
+</body>
+</html>
